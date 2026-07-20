@@ -1,0 +1,5 @@
+# macOS / editor / builder junk
+.DS_Store
+.thumbnail
+*.image-slots.state.json
+.image-slots.state.json
