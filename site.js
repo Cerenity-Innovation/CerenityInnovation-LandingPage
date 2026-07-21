@@ -41,6 +41,28 @@
     onScroll();
   }
 
+  /* ---------- Contact form (opens the visitor's email app) ---------- */
+  var form = document.querySelector('[data-mailto-form]');
+  if (form) {
+    var to = form.getAttribute('data-mailto') || 'info@cerenityinnovation.com';
+    var status = form.querySelector('.status');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var val = function (n) {
+        var el = form.querySelector('[name="' + n + '"]');
+        return el ? el.value.trim() : '';
+      };
+      var name = val('name'), email = val('email'), message = val('message');
+      var subject = 'Website inquiry' + (name ? ' — ' + name : '');
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+      if (status) status.textContent = 'Opening your email app…';
+      window.location.href = 'mailto:' + to +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+    });
+  }
+
   /* ---------- Reveal on scroll ---------- */
   var els = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
   if (!els.length) return;
