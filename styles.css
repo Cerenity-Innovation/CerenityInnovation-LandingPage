@@ -108,7 +108,8 @@ a:hover { color: #AE8270; }
 
   /* Tame desktop paddings so sections fit the viewport */
   .page > section,
-  .page > header { padding-left: 22px !important; padding-right: 22px !important; }
+  .page > header,
+  .page > footer { padding-left: 22px !important; padding-right: 22px !important; }
   .page > section { padding-top: 78px !important; padding-bottom: 78px !important; }
   .page > header  { padding-top: 116px !important; padding-bottom: 64px !important; }
 
@@ -124,6 +125,15 @@ a:hover { color: #AE8270; }
 
   /* Big inter-column gaps look heavy once stacked */
   [style*="gap: 70px"] { gap: 44px !important; }
+}
+
+/* ---------- Contact page ---------- */
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: center;
+}
+@media (max-width: 880px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
 
 /* ---------- Contact form (mailto) ---------- */

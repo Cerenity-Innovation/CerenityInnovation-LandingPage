@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Cerenity Innovation</title>
+<meta name="description" content="Get in touch with Cerenity Innovation about your product, team, or partnership.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+<div class="page" style="background: #221E18; overflow-x: hidden; min-height: 100vh; display: flex; flex-direction: column;">
+
+  <nav id="site-nav" class="site-nav">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-h-light.png" alt="Cerenity Innovation">
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-links">
+      <a href="index.html">AI Agents</a>
+      <a href="enterprise.html">Enterprise</a>
+      <a href="app.html">App</a>
+      <a href="news.html">News</a>
+      <a href="contact.html" class="cta active">Get in touch</a>
+    </div>
+  </nav>
+
+  <header style="position: relative; background: #221E18; color: #EFEBE1; flex: 1; min-height: 100vh; display: flex; align-items: center; padding: 150px 44px 90px;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(120% 90% at 82% 18%, rgba(174,130,112,.18), transparent 55%), radial-gradient(90% 80% at 6% 94%, rgba(200,196,188,.12), transparent 60%); pointer-events: none;"></div>
+    <div class="contact-grid" style="position: relative; max-width: 1120px; margin: 0 auto; width: 100%;">
+
+      <div>
+        <div data-reveal style="font-size: 12px; letter-spacing: .42em; text-transform: uppercase; color: #AE8270; margin-bottom: 34px;">Contact</div>
+        <h1 data-reveal style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(42px, 6vw, 88px); line-height: 1.03; letter-spacing: -.02em; max-width: 13ch; text-wrap: balance;">Let's build something human.</h1>
+        <p data-reveal style="margin-top: 34px; font-size: clamp(17px, 1.7vw, 21px); line-height: 1.55; max-width: 46ch; color: rgba(239,235,225,.72);">Tell us about your product, team, or partnership — we'll get back to you.</p>
+      </div>
+
+      <div data-reveal>
+        <form data-mailto-form data-mailto="info@cerenityinnovation.com" class="contact-form" style="margin: 0; max-width: 100%;">
+          <div class="row">
+            <input name="name" type="text" placeholder="Name" required autocomplete="name">
+            <input name="email" type="email" placeholder="Email" required autocomplete="email">
+          </div>
+          <textarea name="message" placeholder="How can we help?" required></textarea>
+          <div class="actions">
+            <button type="submit">Send message</button>
+            <span class="status" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </header>
+
+  <footer style="background: #221E18; color: #EFEBE1; padding: 40px 44px 44px;">
+    <div style="max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(239,235,225,.14); padding-top: 30px; font-size: 13px; color: rgba(239,235,225,.5);">
+      <a href="index.html"><img src="assets/logo-light.png" alt="Cerenity Innovation" style="height: 46px; display: block;"></a>
+      <span>© 2026 Cerenity Innovation. The human-centered layer for AI.</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
