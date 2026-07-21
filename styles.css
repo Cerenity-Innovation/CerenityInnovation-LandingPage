@@ -1,0 +1,127 @@
+/* ============================================================
+   Cerenity Innovation — shared styles
+   Base + navigation + responsive (mobile) rules.
+   Page content keeps its inline styles for the desktop design;
+   the @media block below adapts the breaking pieces for mobile.
+   ============================================================ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #EFEBE1;
+  color: #241F19;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+a:hover { color: #AE8270; }
+::selection { background: #AE8270; color: #EFEBE1; }
+
+/* ---------- Navigation ---------- */
+.site-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 44px;
+  color: #EFEBE1;
+  transition: background .5s ease, padding .4s ease, box-shadow .5s ease;
+}
+.site-nav.scrolled {
+  background: rgba(22, 24, 20, .82);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  padding: 15px 44px;
+  box-shadow: 0 1px 0 rgba(239, 235, 225, .08);
+}
+.site-nav .brand { display: flex; align-items: center; }
+.site-nav .brand img { height: 34px; display: block; }
+
+.nav-links {
+  display: flex; align-items: center; gap: 34px;
+  font-size: 13px; letter-spacing: .04em;
+}
+.nav-links a { opacity: .82; transition: opacity .3s ease, color .3s ease; }
+.nav-links a.active { opacity: 1; color: #AE8270; }
+.nav-links a.cta {
+  opacity: 1; border: 1px solid currentColor;
+  padding: 9px 18px; border-radius: 999px;
+}
+
+/* Hamburger toggle — hidden on desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column; justify-content: center; gap: 5px;
+  width: 34px; height: 34px;
+  background: none; border: none; padding: 0; cursor: pointer;
+  color: inherit; z-index: 101;
+}
+.nav-toggle span {
+  display: block; width: 24px; height: 2px; border-radius: 2px;
+  background: currentColor;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ============================================================
+   Mobile
+   ============================================================ */
+@media (max-width: 760px) {
+  .site-nav { padding: 15px 20px; }
+  .site-nav.scrolled { padding: 12px 20px; }
+  .site-nav .brand img { height: 30px; }
+
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: min(80vw, 320px);
+    flex-direction: column; align-items: flex-start; justify-content: center;
+    gap: 28px; padding: 88px 34px 40px;
+    font-size: 17px; letter-spacing: .02em;
+    background: rgba(20, 22, 18, .97);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    box-shadow: -18px 0 60px rgba(0, 0, 0, .35);
+    transform: translateX(100%);
+    transition: transform .38s cubic-bezier(.4, 0, .2, 1);
+  }
+  .nav-links.open { transform: translateX(0); }
+  .nav-links a { opacity: .92; }
+  .nav-links a.cta { padding: 11px 22px; }
+  body.menu-open { overflow: hidden; }
+
+  /* Collapse every multi-column grid to a single column */
+  [style*="grid-template-columns: repeat(3"],
+  [style*="grid-template-columns: repeat(5"],
+  [style*="grid-template-columns: 1.1fr"],
+  [style*="grid-template-columns: 1fr .9fr"],
+  [style*="grid-template-columns: 1fr .8fr"],
+  [style*="grid-template-columns: .8fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+  }
+  [style*="grid-template-columns: 190px"] {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+
+  /* Tame desktop paddings so sections fit the viewport */
+  .page > section,
+  .page > header { padding-left: 22px !important; padding-right: 22px !important; }
+  .page > section { padding-top: 78px !important; padding-bottom: 78px !important; }
+  .page > header  { padding-top: 116px !important; padding-bottom: 64px !important; }
+
+  /* Column dividers were meant for side-by-side layout */
+  [style*="border-left"] { border-left: none !important; }
+
+  /* Left/right alignment overrides that only make sense in wide grids */
+  [style*="justify-self: end"] { justify-self: start !important; }
+  [style*="max-width: 620px"] { max-width: 100% !important; }
+
+  /* Neutralize any hard-coded pixel width that could force overflow */
+  [style*="width: 648px"] { width: auto !important; height: auto !important; }
+
+  /* Big inter-column gaps look heavy once stacked */
+  [style*="gap: 70px"] { gap: 44px !important; }
+}

@@ -1,80 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cerenity Innovation — The human-centered layer for AI</title>
+<meta name="description" content="Cerenity Innovation reads the depth behind every signal — inferring the latent human state so any AI agent can understand the person, not just the prompt.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<script src="./support.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
 </head>
 <body>
-<x-dc>
-<helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&amp;display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #EFEBE1; color: #241F19; -webkit-font-smoothing: antialiased; }
-  a { color: inherit; text-decoration: none; }
-  a:hover { color: #AE8270; }
-  ::selection { background: #AE8270; color: #EFEBE1; }
-</style>
-</helmet>
-<div style="background: #EFEBE1; overflow-x: hidden;">
+<div class="page" style="background: #EFEBE1; overflow-x: hidden;">
 
-  <nav ref="{{ navRef }}" style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 22px 44px; transition: background .5s ease, color .5s ease, padding .4s ease, box-shadow .5s ease; color: #EFEBE1;">
-    <a href="#top" style="display: flex; align-items: center;">
-      <img data-logo="light" src="assets/logo-h-light.png" alt="Cerenity Innovation" style="height: 34px; display: block;">
-      <img data-logo="dark" src="assets/logo-h-dark.png" alt="Cerenity Innovation" style="height: 34px; display: none;">
+  <nav id="site-nav" class="site-nav">
+    <a href="#top" class="brand">
+      <img src="assets/logo-h-light.png" alt="Cerenity Innovation">
     </a>
-    <div style="display: flex; align-items: center; gap: 34px; font-size: 13px; letter-spacing: .04em;">
-      <a href="#top" style="opacity: .82;">AI Agents</a>
-      <a href="enterprise.html" style="opacity: .82;">Enterprise</a>
-      <a href="app.html" style="opacity: .82;">App</a>
-      <a href="news.html" style="opacity: .82;">News</a>
-      <a href="#contact" ref="{{ ctaRef }}" style="border: 1px solid currentColor; padding: 9px 18px; border-radius: 999px; opacity: 1;">Get in touch</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="nav-links">
+      <a href="#top">AI Agents</a>
+      <a href="enterprise.html">Enterprise</a>
+      <a href="app.html">App</a>
+      <a href="news.html">News</a>
+      <a href="#contact" class="cta">Get in touch</a>
     </div>
   </nav>
 
   <header id="top" style="position: relative; background: #221E18; color: #EFEBE1; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 160px 44px 90px;">
     <div style="position: absolute; inset: 0; background: radial-gradient(120% 90% at 78% 18%, rgba(174,130,112,.16), transparent 55%), radial-gradient(90% 80% at 8% 96%, rgba(200,196,188,.14), transparent 60%); pointer-events: none;"></div>
     <div style="position: relative; max-width: 1120px; margin: 0 auto; width: 100%;">
-      
-      <h1 data-reveal="" style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(44px, 7vw, 104px); line-height: 1.02; letter-spacing: -.02em; max-width: 15ch; text-wrap: balance;"><span style="font-size: clamp(44px, 7vw, 104px); letter-spacing: -0.02em; text-wrap-mode: initial; width: 648px; height: 277px">The human-centered layer for the next era of AI.</span></h1>
-      <p data-reveal="" style="margin-top: 42px; font-size: clamp(17px, 1.7vw, 21px); line-height: 1.55; max-width: 52ch; color: rgba(239,235,225,.72);">We read the depth, not just the surface — inferring the latent human state behind every signal, so any AI agent can understand the person, not just the prompt.</p>
-      <div data-reveal="" style="margin-top: 52px; display: flex; gap: 16px; flex-wrap: wrap;">
+      <h1 data-reveal style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(44px, 7vw, 104px); line-height: 1.02; letter-spacing: -.02em; max-width: 15ch; text-wrap: balance;">The human-centered layer for the next era of AI.</h1>
+      <p data-reveal style="margin-top: 42px; font-size: clamp(17px, 1.7vw, 21px); line-height: 1.55; max-width: 52ch; color: rgba(239,235,225,.72);">We read the depth, not just the surface — inferring the latent human state behind every signal, so any AI agent can understand the person, not just the prompt.</p>
+      <div data-reveal style="margin-top: 52px; display: flex; gap: 16px; flex-wrap: wrap;">
         <a href="#solution" style="background: #AE8270; color: #221E18; padding: 15px 30px; border-radius: 999px; font-weight: 600; font-size: 14px;">See how it works</a>
         <a href="#contact" style="border: 1px solid rgba(239,235,225,.35); padding: 15px 30px; border-radius: 999px; font-size: 14px;">Partner with us</a>
       </div>
     </div>
-    
   </header>
 
   <section style="background: #EFEBE1; padding: 130px 44px;">
     <div style="max-width: 1120px; margin: 0 auto;">
-      <div data-reveal="" style="font-size: 12px; letter-spacing: .38em; text-transform: uppercase; color: #AE8270; margin-bottom: 34px;">THE TECHNOLOGY SHIFT</div>
-      <h2 data-reveal="" style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(34px, 5vw, 66px); line-height: 1.08; letter-spacing: -.015em; max-width: 20ch;">The shift to human-centered technology.</h2>
-      <p data-reveal="" style="margin-top: 34px; font-size: clamp(17px, 1.7vw, 20px); line-height: 1.6; max-width: 58ch; color: #524C42;">Every wave of computing has moved closer to us. The next one is measured not by speed or scale, but by how deeply the machine understands the human on the other side.</p>
+      <div data-reveal style="font-size: 12px; letter-spacing: .38em; text-transform: uppercase; color: #AE8270; margin-bottom: 34px;">THE TECHNOLOGY SHIFT</div>
+      <h2 data-reveal style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(34px, 5vw, 66px); line-height: 1.08; letter-spacing: -.015em; max-width: 20ch;">The shift to human-centered technology.</h2>
+      <p data-reveal style="margin-top: 34px; font-size: clamp(17px, 1.7vw, 20px); line-height: 1.6; max-width: 58ch; color: #524C42;">Every wave of computing has moved closer to us. The next one is measured not by speed or scale, but by how deeply the machine understands the human on the other side.</p>
     </div>
   </section>
 
   <section style="background: #E6E0D2; padding: 130px 44px;">
     <div style="max-width: 1120px; margin: 0 auto;">
-      <div data-reveal="" style="font-size: 12px; letter-spacing: .38em; text-transform: uppercase; color: #AE8270; margin-bottom: 34px;">THE PROBLEM</div>
-      <h2 data-reveal="" style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(32px, 4.6vw, 60px); line-height: 1.08; letter-spacing: -.015em; max-width: 18ch;">Today's surface-level understanding can't keep up.</h2>
+      <div data-reveal style="font-size: 12px; letter-spacing: .38em; text-transform: uppercase; color: #AE8270; margin-bottom: 34px;">THE PROBLEM</div>
+      <h2 data-reveal style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(32px, 4.6vw, 60px); line-height: 1.08; letter-spacing: -.015em; max-width: 18ch;">Today's surface-level understanding can't keep up.</h2>
       <div style="margin-top: 70px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; border-top: 1px solid rgba(27,29,25,.14);">
-        <div data-reveal="" style="padding: 38px 30px 30px 0;">
+        <div data-reveal style="padding: 38px 30px 30px 0;">
           <div style="font-family: 'Montserrat', sans-serif; font-size: 32px; color: #AE8270; margin-bottom: 18px;">01</div>
           <p style="font-size: clamp(16px, 1.35vw, 18px); line-height: 1.5; color: #241F19;">Even as AI goes multimodal, it still reads only the surface — not the person.</p>
         </div>
-        <div data-reveal="" style="padding: 38px 30px 30px 30px; border-left: 1px solid rgba(27,29,25,.14);">
+        <div data-reveal style="padding: 38px 30px 30px 30px; border-left: 1px solid rgba(27,29,25,.14);">
           <div style="font-family: 'Montserrat', sans-serif; font-size: 32px; color: #AE8270; margin-bottom: 18px;">02</div>
           <p style="font-size: clamp(16px, 1.35vw, 18px); line-height: 1.5; color: #241F19;">Without explicit input, it fails to grasp human complexity — and keeps missing what people actually need.</p>
         </div>
-        <div data-reveal="" style="padding: 38px 0 30px 30px; border-left: 1px solid rgba(27,29,25,.14);">
+        <div data-reveal style="padding: 38px 0 30px 30px; border-left: 1px solid rgba(27,29,25,.14);">
           <div style="font-family: 'Montserrat', sans-serif; font-size: 32px; color: #AE8270; margin-bottom: 18px;">03</div>
           <p style="font-size: clamp(16px, 1.35vw, 18px); line-height: 1.5; color: #241F19;">Acting autonomously on a shallow read doesn't just miss the person — it can quietly <strong style="font-weight: 600;">control</strong> them.</p>
         </div>
@@ -84,37 +74,37 @@
 
   <section id="solution" style="background: #221E18; color: #EFEBE1; padding: 140px 44px;">
     <div style="max-width: 1120px; margin: 0 auto;">
-      <div data-reveal="" style="font-size: 12px; letter-spacing: .38em; text-transform: uppercase; color: #AE8270; margin-bottom: 34px;">The Solution</div>
-      <h2 data-reveal="" style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(34px, 5vw, 66px); line-height: 1.08; letter-spacing: -.015em; max-width: 18ch;">We read the depth, not just the surface.</h2>
-      <p data-reveal="" style="margin-top: 28px; font-size: clamp(17px, 1.7vw, 20px); line-height: 1.55; max-width: 50ch; color: rgba(239,235,225,.72);">A human-understanding layer that plugs into any AI agent.</p>
+      <div data-reveal style="font-size: 12px; letter-spacing: .38em; text-transform: uppercase; color: #AE8270; margin-bottom: 34px;">The Solution</div>
+      <h2 data-reveal style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(34px, 5vw, 66px); line-height: 1.08; letter-spacing: -.015em; max-width: 18ch;">We read the depth, not just the surface.</h2>
+      <p data-reveal style="margin-top: 28px; font-size: clamp(17px, 1.7vw, 20px); line-height: 1.55; max-width: 50ch; color: rgba(239,235,225,.72);">A human-understanding layer that plugs into any AI agent.</p>
 
-      <div data-reveal="" style="margin-top: 72px; font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: rgba(239,235,225,.5);">What it understands</div>
+      <div data-reveal style="margin-top: 72px; font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: rgba(239,235,225,.5);">What it understands</div>
       <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px;">
-        <div data-reveal="" style="border: 1px solid rgba(239,235,225,.16); border-radius: 14px; padding: 36px 30px; background: rgba(239,235,225,.03);">
+        <div data-reveal style="border: 1px solid rgba(239,235,225,.16); border-radius: 14px; padding: 36px 30px; background: rgba(239,235,225,.03);">
           <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 27px; margin-bottom: 14px;">Signals</h3>
           <p style="font-size: 15px; line-height: 1.6; color: rgba(239,235,225,.66);">Observable inputs from multimodal data — everything happening on the outside.</p>
         </div>
-        <div data-reveal="" style="border: 1px solid rgba(239,235,225,.16); border-radius: 14px; padding: 36px 30px; background: rgba(239,235,225,.03);">
+        <div data-reveal style="border: 1px solid rgba(239,235,225,.16); border-radius: 14px; padding: 36px 30px; background: rgba(239,235,225,.03);">
           <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 27px; margin-bottom: 14px;">Foreground</h3>
           <p style="font-size: 15px; line-height: 1.6; color: rgba(239,235,225,.66);">The present moment — what the person is expressing, intending, and doing right now.</p>
         </div>
-        <div data-reveal="" style="border: 1px solid rgba(239,235,225,.16); border-radius: 14px; padding: 36px 30px; background: rgba(239,235,225,.03);">
+        <div data-reveal style="border: 1px solid rgba(239,235,225,.16); border-radius: 14px; padding: 36px 30px; background: rgba(239,235,225,.03);">
           <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 27px; margin-bottom: 14px;">Background</h3>
           <p style="font-size: 15px; line-height: 1.6; color: rgba(239,235,225,.66);">The lasting context beneath the moment — so understanding deepens over time instead of resetting.</p>
         </div>
       </div>
 
-      <div data-reveal="" style="margin-top: 90px; padding-top: 54px; border-top: 1px solid rgba(239,235,225,.14); font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: rgba(239,235,225,.5);">How it works</div>
+      <div data-reveal style="margin-top: 90px; padding-top: 54px; border-top: 1px solid rgba(239,235,225,.14); font-size: 12px; letter-spacing: .32em; text-transform: uppercase; color: rgba(239,235,225,.5);">How it works</div>
       <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px;">
-        <div data-reveal="">
+        <div data-reveal>
           <div style="font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: #AE8270; margin-bottom: 18px;">What it is</div>
           <p style="font-size: 16px; line-height: 1.65; color: rgba(239,235,225,.72);">Genuine human understanding your agent can act on — an interpreter for the unsaid: multimodal signals in, deep human state out, delivered to any agent.</p>
         </div>
-        <div data-reveal="">
+        <div data-reveal>
           <div style="font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: #AE8270; margin-bottom: 18px;">How it integrates</div>
           <p style="font-size: 16px; line-height: 1.65; color: rgba(239,235,225,.72);">As middleware — <strong style="font-weight: 600; color: #EFEBE1;">external</strong> (alongside an agent), <strong style="font-weight: 600; color: #EFEBE1;">built-in</strong> (inside its logic), or <strong style="font-weight: 600; color: #EFEBE1;">supervisor</strong> (governing many agents).</p>
         </div>
-        <div data-reveal="">
+        <div data-reveal>
           <div style="font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: #AE8270; margin-bottom: 18px;">How it's delivered</div>
           <p style="font-size: 16px; line-height: 1.65; color: rgba(239,235,225,.72);">One line to connect via API, SDK, or MCP. We handle the heavy lifting — with inference kept strictly protected.</p>
         </div>
@@ -130,31 +120,31 @@
       <div style="margin-top: 60px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px;">
         <div data-reveal style="display: flex; flex-direction: column; gap: 14px;">
           <div style="height: 130px; border: 1px solid rgba(36,31,25,.12); border-radius: 14px; overflow: hidden; background: #FFFFFF; padding: 22px;">
-            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="accel-startx" src="assets/accel3-startx.png" fit="contain" shape="rect" placeholder="StartX" style="width: 100%; height: 100%; display: block;" hint-size="100%,86px"></x-import>
+            <img src="assets/accel3-startx.png" alt="StartX" style="width: 100%; height: 100%; object-fit: contain; display: block;">
           </div>
           <div style="font-size: 13px; letter-spacing: .04em; color: #524C42;">StartX <span style="color:#78715F;">· 2026</span></div>
         </div>
         <div data-reveal style="display: flex; flex-direction: column; gap: 14px;">
           <div style="height: 130px; border: 1px solid rgba(36,31,25,.12); border-radius: 14px; overflow: hidden; background: #FFFFFF; padding: 22px;">
-            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="accel-skydeck" src="assets/accel3-skydeck.png" fit="contain" shape="rect" placeholder="Berkeley SkyDeck IPP" style="width: 100%; height: 100%; display: block;" hint-size="100%,86px"></x-import>
+            <img src="assets/accel3-skydeck.png" alt="Berkeley SkyDeck IPP" style="width: 100%; height: 100%; object-fit: contain; display: block;">
           </div>
           <div style="font-size: 13px; letter-spacing: .04em; color: #524C42;">Berkeley SkyDeck IPP <span style="color:#78715F;">· 2025</span></div>
         </div>
         <div data-reveal style="display: flex; flex-direction: column; gap: 14px;">
           <div style="height: 130px; border: 1px solid rgba(36,31,25,.12); border-radius: 14px; overflow: hidden; background: #FFFFFF; padding: 22px;">
-            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="accel-leaps" src="assets/accel3-leaps.png" fit="contain" shape="rect" placeholder="LEAPS" style="width: 100%; height: 100%; display: block;" hint-size="100%,86px"></x-import>
+            <img src="assets/accel3-leaps.png" alt="LEAPS" style="width: 100%; height: 100%; object-fit: contain; display: block;">
           </div>
           <div style="font-size: 13px; letter-spacing: .04em; color: #524C42;">LEAPS <span style="color:#78715F;">· 2025</span></div>
         </div>
         <div data-reveal style="display: flex; flex-direction: column; gap: 14px;">
           <div style="height: 130px; border: 1px solid rgba(36,31,25,.12); border-radius: 14px; overflow: hidden; background: #FFFFFF; padding: 22px;">
-            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="accel-delightx" src="assets/accel3-delightx.png" fit="contain" shape="rect" placeholder="Delight X" style="width: 100%; height: 100%; display: block;" hint-size="100%,86px"></x-import>
+            <img src="assets/accel3-delightx.png" alt="Delight X" style="width: 100%; height: 100%; object-fit: contain; display: block;">
           </div>
           <div style="font-size: 13px; letter-spacing: .04em; color: #524C42;">Delight X <span style="color:#78715F;">· 2025</span></div>
         </div>
         <div data-reveal style="display: flex; flex-direction: column; gap: 14px;">
           <div style="height: 130px; border: 1px solid rgba(36,31,25,.12); border-radius: 14px; overflow: hidden; background: #FFFFFF; padding: 22px;">
-            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="accel-grit" src="assets/accel-grit.png" fit="contain" shape="rect" placeholder="GRIT &amp; Growth Accelerator Nagoya" style="width: 100%; height: 100%; display: block;" hint-size="100%,86px"></x-import>
+            <img src="assets/accel-grit.png" alt="GRIT &amp; Growth Accelerator Nagoya" style="width: 100%; height: 100%; object-fit: contain; display: block;">
           </div>
           <div style="font-size: 13px; letter-spacing: .04em; color: #524C42;">GRIT &amp; Growth Accelerator Nagoya <span style="color:#78715F;">· 2025</span></div>
         </div>
@@ -165,9 +155,9 @@
   <section id="contact" style="background: #221E18; color: #EFEBE1; padding: 150px 44px 90px; position: relative;">
     <div style="position: absolute; inset: 0; background: radial-gradient(100% 90% at 50% 0%, rgba(174,130,112,.15), transparent 60%); pointer-events: none;"></div>
     <div style="position: relative; max-width: 1120px; margin: 0 auto; text-align: center;">
-      <div data-reveal="" style="font-size: 12px; letter-spacing: .42em; text-transform: uppercase; color: #AE8270; margin-bottom: 34px;">Cerenity Innovation</div>
-      <h2 data-reveal="" style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(38px, 5.5vw, 78px); line-height: 1.05; letter-spacing: -.02em; max-width: 16ch; margin: 0 auto;">Build AI that understands the person.</h2>
-      <div data-reveal="" style="margin-top: 48px;">
+      <div data-reveal style="font-size: 12px; letter-spacing: .42em; text-transform: uppercase; color: #AE8270; margin-bottom: 34px;">Cerenity Innovation</div>
+      <h2 data-reveal style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(38px, 5.5vw, 78px); line-height: 1.05; letter-spacing: -.02em; max-width: 16ch; margin: 0 auto;">Build AI that understands the person.</h2>
+      <div data-reveal style="margin-top: 48px;">
         <a href="mailto:info@cerenityinnovation.com" style="background: #AE8270; color: #221E18; padding: 16px 34px; border-radius: 999px; font-weight: 600; font-size: 15px; display: inline-block;">Partner with us</a>
       </div>
     </div>
@@ -178,74 +168,5 @@
   </section>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  constructor(props) {
-    super(props);
-    this.navRef = React.createRef();
-    this.ctaRef = React.createRef();
-  }
-  renderVals() {
-    return { navRef: this.navRef, ctaRef: this.ctaRef };
-  }
-  componentDidMount() {
-    // scroll reveals
-    const els = Array.from(document.querySelectorAll('[data-reveal]'));
-    els.forEach((el, i) => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(22px)';
-      el.style.transition = 'opacity .8s cubic-bezier(.22,.61,.36,1), transform .8s cubic-bezier(.22,.61,.36,1)';
-    });
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          const sibs = Array.from(e.target.parentElement.querySelectorAll('[data-reveal]'));
-          const delay = Math.max(0, sibs.indexOf(e.target)) * 80;
-          e.target.style.transitionDelay = delay + 'ms';
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'translateY(0)';
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
-    els.forEach((el) => io.observe(el));
-
-    // nav scroll state
-    const nav = this.navRef.current;
-    const logoLight = nav ? nav.querySelector('[data-logo="light"]') : null;
-    const logoDark = nav ? nav.querySelector('[data-logo="dark"]') : null;
-    const onScroll = () => {
-      const solid = window.scrollY > window.innerHeight * 0.82;
-      if (!nav) return;
-      if (logoLight && logoDark) {
-        logoLight.style.display = 'block';
-        logoDark.style.display = 'none';
-      }
-      if (solid) {
-        nav.style.background = 'rgba(22,24,20,.82)';
-        nav.style.backdropFilter = 'blur(14px)';
-        nav.style.webkitBackdropFilter = 'blur(14px)';
-        nav.style.color = '#EFEBE1';
-        nav.style.padding = '15px 44px';
-        nav.style.boxShadow = '0 1px 0 rgba(239,235,225,.08)';
-      } else {
-        nav.style.background = 'transparent';
-        nav.style.backdropFilter = 'none';
-        nav.style.webkitBackdropFilter = 'none';
-        nav.style.color = '#EFEBE1';
-        nav.style.padding = '22px 44px';
-        nav.style.boxShadow = 'none';
-      }
-    };
-    this._onScroll = onScroll;
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  }
-  componentWillUnmount() {
-    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
-  }
-}
-</script>
 </body>
 </html>
