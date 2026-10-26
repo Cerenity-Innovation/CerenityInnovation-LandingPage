@@ -34,8 +34,12 @@
 
   /* ---------- Nav scrolled state ---------- */
   if (nav) {
+    // Solid once past the dark hero; a short header (news, legal) ends before 82% of the viewport.
+    var hero = document.querySelector('.page > header');
     var onScroll = function () {
-      nav.classList.toggle('scrolled', window.scrollY > window.innerHeight * 0.82);
+      var threshold = window.innerHeight * 0.82;
+      if (hero) threshold = Math.min(threshold, hero.offsetHeight - nav.offsetHeight);
+      nav.classList.toggle('scrolled', window.scrollY > threshold);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();

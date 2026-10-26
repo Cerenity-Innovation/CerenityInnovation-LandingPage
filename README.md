@@ -7,6 +7,10 @@ Cerenity Innovation's website — served via GitHub Pages at **cerenityinnovatio
 - `enterprise.html` — Enterprise
 - `app.html` — App
 - `news.html` — News & press
+- `privacy.html`, `terms.html`, `disclaimer.html` — the Cerenity app's Privacy Policy, Terms of Use
+  and Disclaimer (linked from every page footer). Generated from the app repo's
+  `backend/content/legal/*.md` by `backend/scripts/export_legal_site.py`; edit the text there and
+  re-export, not here.
 
 ## How it's built
 - Plain, self-contained static HTML — no framework, no build step, no runtime CDN
