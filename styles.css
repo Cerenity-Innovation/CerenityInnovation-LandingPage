@@ -68,7 +68,13 @@ a:hover { color: #AE8270; }
    ============================================================ */
 @media (max-width: 760px) {
   .site-nav { padding: 15px 20px; }
-  .site-nav.scrolled { padding: 12px 20px; }
+  /* No blur here: a backdrop-filter would trap the fixed .nav-links inside the bar's height */
+  .site-nav.scrolled {
+    padding: 12px 20px;
+    background: rgba(22, 24, 20, .95);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
   .site-nav .brand img { height: 30px; }
 
   .nav-toggle { display: flex; }
@@ -180,6 +186,20 @@ a:hover { color: #AE8270; }
 .footer-legal { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 .footer-legal a { color: rgba(239, 235, 225, .72); transition: color .3s ease; }
 .footer-legal a:hover { color: #AE8270; }
+
+/* ---------- Tideya page: Google Calendar detail ---------- */
+.calendar-detail { font-size: 15px; line-height: 1.65; color: #524C42; }
+.calendar-detail h3 {
+  font-size: 12px; font-weight: 400; letter-spacing: .28em; text-transform: uppercase;
+  color: #AE8270; margin-bottom: 22px;
+}
+.calendar-detail ul { padding-left: 20px; margin-bottom: 26px; }
+.calendar-detail li { margin-bottom: 10px; padding-left: 4px; }
+.calendar-detail li::marker { color: #AE8270; }
+.calendar-detail strong { font-weight: 600; color: #241F19; }
+.calendar-detail p { margin-bottom: 14px; }
+.calendar-detail a { color: #8E6656; text-decoration: underline; text-underline-offset: 3px; }
+.calendar-detail a:hover { color: #AE8270; }
 
 /* ---------- Legal pages (privacy / terms / disclaimer) ---------- */
 .legal-doc {

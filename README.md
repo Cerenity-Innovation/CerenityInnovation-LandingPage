@@ -5,7 +5,8 @@ Cerenity Innovation's website — served via GitHub Pages at **cerenityinnovatio
 ## Pages
 - `index.html` — home (AI Agents)
 - `enterprise.html` — Enterprise
-- `app.html` — App
+- `app.html` — Tideya, the app's public home page (the home page URL on the Google OAuth consent
+  screen). Keep its Google Calendar section in step with Privacy Policy Section 13.1.
 - `news.html` — News & press
 - `privacy.html`, `terms.html`, `disclaimer.html` — the Cerenity app's Privacy Policy, Terms of Use
   and Disclaimer (linked from every page footer). Generated from the app repo's
@@ -27,5 +28,3 @@ python3 -m http.server 8000   # then open http://localhost:8000
 
 ## Notes
 - Fonts (Montserrat, Newsreader) load from Google Fonts.
-- The App page phone mockups currently show styled placeholder screens — drop in real
-  app screenshots when ready.
