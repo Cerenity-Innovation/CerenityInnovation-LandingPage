@@ -187,7 +187,7 @@ a:hover { color: #AE8270; }
 .footer-legal a { color: rgba(239, 235, 225, .72); transition: color .3s ease; }
 .footer-legal a:hover { color: #AE8270; }
 
-/* ---------- Tideya page: Google Calendar detail ---------- */
+/* ---------- TIDEYA page: Google Calendar detail ---------- */
 .calendar-detail { font-size: 15px; line-height: 1.65; color: #524C42; }
 .calendar-detail h3 {
   font-size: 12px; font-weight: 400; letter-spacing: .28em; text-transform: uppercase;

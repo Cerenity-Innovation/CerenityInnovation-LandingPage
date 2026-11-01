@@ -5,7 +5,7 @@ Cerenity Innovation's website — served via GitHub Pages at **cerenityinnovatio
 ## Pages
 - `index.html` — home (AI Agents)
 - `enterprise.html` — Enterprise
-- `app.html` — Tideya, the app's public home page (the home page URL on the Google OAuth consent
+- `app.html` — TIDEYA, the app's public home page (the home page URL on the Google OAuth consent
   screen). Keep its Google Calendar section in step with Privacy Policy Section 13.1.
 - `news.html` — News & press
 - `privacy.html`, `terms.html`, `disclaimer.html` — the Cerenity app's Privacy Policy, Terms of Use
