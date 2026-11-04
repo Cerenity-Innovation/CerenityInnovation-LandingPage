@@ -8,6 +8,10 @@ Cerenity Innovation's website — served via GitHub Pages at **cerenityinnovatio
 - `app.html` — TIDEYA, the app's public home page (the home page URL on the Google OAuth consent
   screen). Keep its Google Calendar section in step with Privacy Policy Section 13.1.
 - `news.html` — News & press
+- `ja/` — Japanese versions of the five pages above, linked by the EN / JA switcher in the
+  nav and `hreflang` tags. They share `styles.css`, `site.js` and `assets/`; Japanese type
+  tweaks live at the end of `styles.css`. When you change English copy, update the matching
+  `ja/` page too. The legal pages are English-only and the `ja/` footers link to them.
 - `privacy.html`, `terms.html`, `disclaimer.html` — the Cerenity app's Privacy Policy, Terms of Use
   and Disclaimer (linked from every page footer). Generated from the app repo's
   `backend/content/legal/*.md` by `backend/scripts/export_legal_site.py`; edit the text there and

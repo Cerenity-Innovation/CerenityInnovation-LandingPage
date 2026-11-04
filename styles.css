@@ -63,6 +63,12 @@ a:hover { color: #AE8270; }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Language switcher (EN / JA) */
+.lang-switch { display: flex; align-items: center; gap: 4px; font-size: 12px; letter-spacing: .08em; }
+.lang-switch a { opacity: .55; padding: 4px 6px; }
+.lang-switch a + a::before { content: "/"; margin: 0 8px 0 -6px; opacity: .5; color: currentColor; }
+.lang-switch a[aria-current] { opacity: 1; }
+
 /* ============================================================
    Mobile
    ============================================================ */
@@ -244,3 +250,32 @@ a:hover { color: #AE8270; }
   .legal-doc h2 { margin-top: 44px; }
   .legal-switch { margin-bottom: 40px; }
 }
+
+/* ---------- Japanese pages (ja/) ----------
+   The page markup is shared with the English site; these rules adapt
+   the Latin-tuned type (Newsreader, tight leading, ch widths) for Japanese. */
+html[lang="ja"] body {
+  font-family: 'Helvetica Neue', Arial, 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  line-break: strict;
+}
+html[lang="ja"] [style*="Newsreader"] {
+  font-family: 'Newsreader', 'Noto Serif JP', 'Hiragino Mincho ProN', serif !important;
+  letter-spacing: .02em !important;
+}
+html[lang="ja"] h1 {
+  font-size: clamp(34px, 4.8vw, 68px) !important;
+  line-height: 1.3 !important; max-width: 20em !important;
+  word-break: auto-phrase;
+}
+html[lang="ja"] h2 {
+  line-height: 1.4 !important; max-width: 22em !important;
+  word-break: auto-phrase;
+}
+html[lang="ja"] h2[style*="clamp(34px, 5vw"],
+html[lang="ja"] h2[style*="clamp(32px, 4.6vw"],
+html[lang="ja"] h2[style*="clamp(30px, 4.4vw"],
+html[lang="ja"] h2[style*="clamp(36px, 5vw"] { font-size: clamp(28px, 3.6vw, 48px) !important; }
+html[lang="ja"] h2[style*="clamp(28px, 2.8vw"] { font-size: clamp(22px, 2.2vw, 28px) !important; }
+html[lang="ja"] p { line-height: 1.85 !important; }
+html[lang="ja"] .calendar-detail { line-height: 1.85; }
+.calendar-detail .ja-note { font-size: 13px; color: #78715F; }

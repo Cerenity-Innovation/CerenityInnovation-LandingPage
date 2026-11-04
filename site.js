@@ -60,7 +60,7 @@
       var name = val('name'), email = val('email'), message = val('message');
       var subject = 'Website inquiry' + (name ? ' — ' + name : '');
       var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
-      if (status) status.textContent = 'Opening your email app…';
+      if (status) status.textContent = form.getAttribute('data-opening') || 'Opening your email app…';
       window.location.href = 'mailto:' + to +
         '?subject=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(body);
