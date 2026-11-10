@@ -37,7 +37,7 @@
     <div style="position: relative; max-width: 1120px; margin: 0 auto; width: 100%;">
       <div style="font-size: 12px; letter-spacing: .42em; text-transform: uppercase; color: #AE8270; margin-bottom: 34px;">Legal · TIDEYA App</div>
       <h1 style="font-family: 'Newsreader', serif; font-weight: 300; font-size: clamp(42px, 6vw, 88px); line-height: 1.03; letter-spacing: -.02em; text-wrap: balance;">Privacy Policy</h1>
-      <p style="margin-top: 30px; font-size: 15px; line-height: 1.6; color: rgba(239,235,225,.66);">Effective October 31, 2026 · Last updated November 3, 2026</p>
+      <p style="margin-top: 30px; font-size: 15px; line-height: 1.6; color: rgba(239,235,225,.66);">Effective October 31, 2026 · Last updated November 9, 2026</p>
     </div>
   </header>
 
@@ -52,8 +52,8 @@
       <p>At Cerenity, we believe that meaningful technology should respect the people it serves.</p>
       <p>This Privacy Policy explains how Cerenity Innovation, Inc. (&quot;Cerenity,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects, uses, processes, stores, shares, and protects personal information in connection with the TIDEYA app (also referred to in our materials as the &quot;Cerenity App&quot;) and related services (collectively, the &quot;Services&quot;).</p>
       <p>Our Services are designed to help users better understand their daily energy levels, stress-related patterns, and personal well-being through AI-powered analysis of physiological and contextual information.</p>
-      <p>Artificial intelligence is a core part of Cerenity. In addition to using personal information to generate individualised wellness insights, Cerenity may, with appropriate notice and consent, use eligible personal wellness information to develop, train, test, evaluate, and improve shared Cerenity AI models used across the Services. Google Calendar data and other Google user data are excluded from shared AI model training, as described in Sections 5.8 and 13.</p>
-      <p>Because some of the information processed through Cerenity may be sensitive, we are committed to providing transparency, meaningful user control, appropriate consent mechanisms, and safeguards proportionate to the nature of the information.</p>
+      <p>Artificial intelligence is a core part of TIDEYA. In addition to using personal information to generate individualised wellness insights, Cerenity may, with appropriate notice and consent, use eligible personal wellness information to develop, train, test, evaluate, and improve shared Cerenity AI models used across the Services. Google Calendar data and other Google user data are excluded from shared AI model training, as described in Sections 5.8 and 13.</p>
+      <p>Because some of the information processed through TIDEYA may be sensitive, we are committed to providing transparency, meaningful user control, appropriate consent mechanisms, and safeguards proportionate to the nature of the information.</p>
       <p>This Privacy Policy applies to information processed by Cerenity. Connected third-party platforms may have separate privacy policies governing their independent processing activities.</p>
       <h2 id="s2">2. Information We Collect</h2>
       <p>Depending on the features you enable and the permissions you grant, we may collect and process the following categories of information.</p>
@@ -68,15 +68,16 @@
       </ul>
       <p>We use this information to establish and manage your account, provide support, maintain security, and communicate with you.</p>
       <h3>2.2 Physiological and Wellness Information</h3>
-      <p>With your authorisation, we may access and process physiological and wellness information from compatible devices and connected services.</p>
-      <p>Depending on the integrations you enable, this may include:</p>
+      <p>With your authorisation, we may access and process physiological and wellness information from compatible devices and connected services, such as Apple Health (HealthKit) on iPhone and Health Connect on Android (&quot;health platforms&quot;). TIDEYA only reads this information; it does not write to your health platform.</p>
+      <p>Depending on the integrations you enable and the permissions you grant, this may include:</p>
       <ul>
-        <li>Heart rate.</li>
+        <li>Heart rate, resting heart rate, and walking heart rate average.</li>
         <li>Heart rate variability.</li>
+        <li>Respiratory rate and blood oxygen saturation.</li>
         <li>Sleep duration and sleep patterns.</li>
-        <li>Activity and movement information.</li>
-        <li>Exercise-related information.</li>
-        <li>Physiological trends and measurements.</li>
+        <li>Steps, distance, flights climbed, exercise time, and energy burned.</li>
+        <li>Workouts and other exercise-related information.</li>
+        <li>Weight, body fat percentage, and body mass index.</li>
         <li>Other wellness measurements supported by connected devices and specifically disclosed when access is requested.</li>
       </ul>
       <p>We use such information to establish personal baselines, estimate energy capacity, identify patterns and changes over time, generate personalised wellness insights, and, where permitted and consented to, improve Cerenity&#x27;s shared AI models.</p>
@@ -104,6 +105,7 @@
         <li>Other location-dependent conditions relevant to your wellness insights.</li>
       </ul>
       <p>The precision and frequency of location processing will depend on the permissions you provide and the features you use.</p>
+      <p>To get your local weather, we send your location coordinates to our weather provider, OpenWeather. Turning Location off in TIDEYA deletes the coordinates we have stored and stops these requests.</p>
       <h3>2.5 User-Provided Information</h3>
       <p>We may process information that you voluntarily provide, including:</p>
       <ul>
@@ -111,12 +113,16 @@
         <li>Daily check-ins.</li>
         <li>Self-reported energy levels.</li>
         <li>Self-reported stress levels.</li>
-        <li>Feedback.</li>
-        <li>Responses to prompts or questionnaires.</li>
+        <li>Feedback and bug reports.</li>
+        <li>Responses to prompts or questionnaires, such as your daily rhythm, personality, and goals, and any identity tags or struggles you choose to share.</li>
+        <li>Messages you send to TIDEYA, where a feature lets you do so.</li>
         <li>Other information you submit through the Services.</li>
       </ul>
       <p>Please avoid providing information that is not reasonably necessary for the functionality you are using.</p>
-      <h3>2.6 Usage and Technical Information</h3>
+      <h3>2.6 Birth Information</h3>
+      <p>We ask for your date of birth and, if you know them, your time and place of birth.</p>
+      <p>We use your date of birth to confirm that you meet the minimum age described in Section 11, and your birth information to personalise your daily advice. You can change or remove your birth time and place in the You tab.</p>
+      <h3>2.7 Usage and Technical Information</h3>
       <p>We may collect limited technical information necessary to operate, secure, evaluate, and troubleshoot the Services.</p>
       <p>This may include:</p>
       <ul>
@@ -128,7 +134,8 @@
         <li>Security and diagnostic logs.</li>
         <li>Interaction information necessary to evaluate feature performance.</li>
       </ul>
-      <h3>2.7 AI-Generated and Inferred Information</h3>
+      <p>We use Sentry, an error-monitoring service, to receive error and crash reports from the app. A report can include your device and app details, your IP address, your account identifier, and a record of the app screens and actions leading up to the error. If you send feedback through the app&#x27;s bug-report form, Sentry also receives what you enter there, including any name or email address.</p>
+      <h3>2.8 AI-Generated and Inferred Information</h3>
       <p>Cerenity&#x27;s systems generate or infer information from the data described above.</p>
       <p>This may include:</p>
       <ul>
@@ -137,6 +144,7 @@
         <li>Individual physiological baselines.</li>
         <li>Predicted changes in energy or wellness.</li>
         <li>Relationships among schedules, activities, environmental factors, and wellness indicators.</li>
+        <li>Signals calculated from your birth information.</li>
         <li>Personalised recommendations.</li>
         <li>AI-generated wellness messages.</li>
         <li>Model confidence or similar analytical indicators.</li>
@@ -148,7 +156,7 @@
       <h3>Service Delivery</h3>
       <p>To provide energy forecasting, stress-related insights, wellness analysis, personalised recommendations, and other requested features.</p>
       <h3>Personalization</h3>
-      <p>To establish and update your individual baselines and tailor Cerenity to your patterns, activities, and preferences.</p>
+      <p>To establish and update your individual baselines and tailor TIDEYA to your patterns, activities, and preferences.</p>
       <h3>AI Model Development and Improvement</h3>
       <p>Subject to applicable consent and legal requirements, to develop, train, fine-tune, test, evaluate, validate, calibrate, monitor, and improve shared Cerenity AI models and analytical systems.</p>
       <p>This processing is intended to improve Cerenity&#x27;s health and wellness functionality for current and future users.</p>
@@ -163,10 +171,10 @@
       <p>To provide important service-related notifications and respond to your requests.</p>
       <p>We do not use personal health information for targeted advertising.</p>
       <p>We do not sell personal health information to data brokers.</p>
-      <p>HealthKit-derived information is not used for advertising, marketing, unrelated profiling, or unrelated data mining.</p>
+      <p>Information from HealthKit, Health Connect, and other health platforms is not used for advertising, marketing, unrelated profiling, or unrelated data mining.</p>
       <p>Google user data is not sold and is not used for advertising, marketing, unrelated profiling, or unrelated data mining.</p>
       <h2 id="s4">4. AI Processing and Personalization</h2>
-      <p>AI-powered analysis is a core component of Cerenity.</p>
+      <p>AI-powered analysis is a core component of TIDEYA.</p>
       <p>Cerenity analyses authorised physiological, behavioural, scheduling, environmental, and user-provided information to identify patterns and generate personalised wellness insights.</p>
       <p>Processing may occur:</p>
       <ul>
@@ -178,6 +186,15 @@
       <p>AI processing may generate new inferred information concerning your wellness, energy, stress-related patterns, behaviour, or activities.</p>
       <p>These inferences may be inaccurate and should not be treated as medical conclusions.</p>
       <p>Where personal information is transmitted to an external AI provider, Cerenity will clearly disclose the relevant sharing and obtain explicit permission where required by applicable law or platform requirements.</p>
+      <h3>OpenAI</h3>
+      <p>TIDEYA uses third-party AI language models provided by OpenAI, together with our own algorithms, to write your daily advice, insights, and recommendations. We send information to OpenAI only if you allow AI processing. TIDEYA asks you during setup, and you can change your answer at any time in the You tab. If you do not allow it, TIDEYA writes your advice without sending anything to OpenAI.</p>
+      <p>What we send is a summary for the day, without your name, email address, or account details. Depending on what you have connected, it can include:</p>
+      <ul>
+        <li>General levels describing your energy today, your overnight recovery, how your energy is likely to arrive through the day, and your recent trend. These are derived from your health platform, calendar, and check-in information.</li>
+        <li>Signals calculated from your birth information.</li>
+        <li>Where a feature lets you send messages to TIDEYA, your messages and context such as your recent sleep, heart rate variability, mood check-ins, goals, and any identity tags or struggles you chose to share.</li>
+      </ul>
+      <p>We take measures to minimise the risk of identification, but de-identified information may not be entirely anonymous. OpenAI is contractually prohibited from using information shared by TIDEYA to train or improve its models.</p>
       <p>Unless separately disclosed and expressly authorised, third-party providers acting for Cerenity are not permitted to use Cerenity users&#x27; personal wellness information to independently train their own unrelated general-purpose AI models.</p>
       <p>Google Calendar data and other Google user data, including information derived from them, are never provided to a third-party AI provider to train or improve that provider&#x27;s models or any other generalised AI model. Section 13.4 describes the limited summaries sent to OpenAI, with your permission, to generate your own insights.</p>
       <h2 id="s5">5. Shared AI Model Training and Improvement</h2>
@@ -214,11 +231,11 @@
       <p>Where required by applicable law, Apple requirements, or other platform requirements, Cerenity will obtain separate affirmative consent before using eligible personal wellness information for shared AI model training or improvement.</p>
       <p>The consent request will describe the nature and purpose of the processing.</p>
       <p>Acceptance of Cerenity&#x27;s Terms of Use alone does not replace any separate model-training consent that is required.</p>
-      <h3>5.4 HealthKit and Similar Health Platform Information</h3>
-      <p>Information obtained through Apple HealthKit is subject to additional restrictions.</p>
-      <p>Cerenity will only use HealthKit-derived information for purposes permitted under Apple&#x27;s requirements and applicable law.</p>
-      <p>Where HealthKit-derived information contributes to model development, such processing will be limited to developing or improving the health and wellness functionality provided through Cerenity and will occur only with the permissions required for that processing.</p>
-      <p>Cerenity does not use HealthKit information for:</p>
+      <h3>5.4 HealthKit, Health Connect, and Similar Health Platform Information</h3>
+      <p>Information obtained through Apple HealthKit, Android Health Connect, or a similar health platform is subject to additional restrictions.</p>
+      <p>Cerenity will only use such information for purposes permitted under the platform&#x27;s requirements (including Apple&#x27;s requirements and the Health Connect permissions policy) and applicable law.</p>
+      <p>Where health platform information contributes to model development, such processing will be limited to developing or improving the health and wellness functionality provided through TIDEYA and will occur only with the permissions required for that processing.</p>
+      <p>Cerenity does not use health platform information for:</p>
       <ul>
         <li>Advertising.</li>
         <li>Marketing.</li>
@@ -227,14 +244,14 @@
         <li>General-purpose data mining unrelated to the Cerenity health and wellness service.</li>
         <li>Unrelated general-purpose AI training.</li>
       </ul>
-      <p>Cerenity will not provide HealthKit-derived personal information to a third-party AI provider for that provider&#x27;s own independent or general-purpose model training.</p>
+      <p>Cerenity will not provide health platform information to a third-party AI provider for that provider&#x27;s own independent or general-purpose model training. Summaries derived from it are sent to OpenAI only as described in Section 4, with your permission.</p>
       <h3>5.5 Reducing Identifiability</h3>
       <p>Where reasonably practicable, Cerenity applies measures designed to reduce direct identification of users in datasets used for shared model improvement.</p>
       <p>Depending on the processing involved, such measures may include separating direct account identifiers from training records, pseudonymisation, aggregation, access restrictions, or other privacy and security safeguards.</p>
       <p>De-identification does not eliminate every possible privacy risk, and Cerenity therefore continues to apply safeguards appropriate to the nature of the information.</p>
       <h3>5.6 Withdrawal of Model-Training Consent</h3>
       <p>Where model-training processing is based on your consent, you may withdraw that consent for future processing.</p>
-      <p>You may do so using privacy controls made available through Cerenity or by contacting:</p>
+      <p>You may do so using privacy controls made available in TIDEYA or by contacting:</p>
       <p><a href="mailto:info@cerenityinnovation.com">info@cerenityinnovation.com</a></p>
       <p>Following withdrawal, we will stop adding newly collected eligible personal information to shared AI model training based on that consent within a reasonable operational period.</p>
       <p>Where identifiable source information remains separately stored and is subject to a valid deletion request, we will delete it in accordance with applicable law and our retention obligations.</p>
@@ -270,14 +287,17 @@
         <li>Security.</li>
         <li>Technical maintenance.</li>
         <li>Data storage.</li>
+        <li>Error and crash monitoring.</li>
+        <li>Weather information.</li>
         <li>Customer support.</li>
       </ul>
+      <p>Our providers currently include Amazon Web Services (hosting, storage, and sign-in), OpenAI (AI-written advice, with your permission), Sentry (error and crash monitoring), and OpenWeather (local weather).</p>
       <p>Service providers are required to process information consistently with their contractual obligations to Cerenity and applicable law.</p>
       <p>Where a provider receives personal information for AI processing, Cerenity will provide appropriate disclosure and obtain explicit permission where required.</p>
       <h3>6.2 Third-Party AI Providers</h3>
-      <p>If Cerenity sends personal information to a third-party AI provider, we will disclose the relevant processing in accordance with applicable requirements.</p>
+      <p>If Cerenity sends personal information to a third-party AI provider, we will disclose the relevant processing in accordance with applicable requirements. Our current AI provider is OpenAI, as described in Section 4.</p>
       <p>Unless separately disclosed and expressly consented to, personal wellness information supplied to such providers on Cerenity&#x27;s behalf may not be used by those providers for their own independent general-purpose AI training.</p>
-      <p>HealthKit-derived information is subject to the additional restrictions described in this Privacy Policy.</p>
+      <p>Health platform information is subject to the additional restrictions described in Section 5.4.</p>
       <p>Google user data, including information derived from it, is never supplied to a third-party AI provider for training, as described in Sections 5.8 and 13.4.</p>
       <h3>6.3 Connected Platforms</h3>
       <p>When you connect a wearable, health service, calendar provider, or other external platform, information may be exchanged with that platform in accordance with your permissions.</p>
@@ -289,7 +309,7 @@
       <h3>6.6 Advertising and Data Sales</h3>
       <p>Cerenity does not sell personal health information to advertising platforms, data brokers, or information resellers.</p>
       <p>Cerenity does not use personal physiological information for targeted advertising.</p>
-      <p>HealthKit-derived information is not used for advertising or marketing purposes.</p>
+      <p>Information from HealthKit, Health Connect, and other health platforms is not used for advertising or marketing purposes.</p>
       <p>Google user data is not sold and is not used for advertising or marketing purposes.</p>
       <h2 id="s7">7. International Data Transfers</h2>
       <p>Cerenity Innovation, Inc. is based in the United States, and our infrastructure and service providers may process information in countries or regions outside your country of residence.</p>
@@ -322,13 +342,13 @@
         <li>Exercise other rights available under applicable privacy law.</li>
       </ul>
       <p>You may also change device-level permissions using your device or connected-service settings.</p>
-      <p>Where account creation is supported, account deletion may be initiated through Cerenity&#x27;s account-deletion functionality.</p>
+      <p>You can delete your account in TIDEYA&#x27;s You tab.</p>
       <p>Requests relating to privacy or AI model-training consent may also be submitted to:</p>
       <p><a href="mailto:info@cerenityinnovation.com">info@cerenityinnovation.com</a></p>
       <p>We may need to verify your identity before processing certain requests.</p>
       <p>We will respond within the period required by applicable law.</p>
       <h2 id="s11">11. Children&#x27;s Privacy</h2>
-      <p>Cerenity is intended for users aged 16 or older unless Cerenity expressly states otherwise for a particular service.</p>
+      <p>TIDEYA is intended for users aged 16 or older unless we expressly state otherwise for a particular service.</p>
       <p>We do not knowingly collect personal information from children in violation of applicable law.</p>
       <p>If we become aware that such information was collected without the necessary authorisation, we will take appropriate steps to delete or otherwise address the information.</p>
       <h2 id="s12">12. Third-Party Privacy Policies</h2>
